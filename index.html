@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" style="background-color: azure; font-size: 20px;">Hello, {{data_1}} <h4>Yes!</h4></div>
+    <script src="dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    data_1: '张三',
+                    data_2: {
+                        name: {
+                            first: '张',
+                            second: '三'
+                        },
+                        sex: 0,
+                        age: 20
+                    },
+                    data_3: {
+                        info: [
+                            {
+                                name: ['张', '三']
+                            },
+                            {
+                                like: [
+                                    {
+                                        obj: '跳伞',
+                                        ads: [
+                                            '北京',
+                                            '上海',
+                                            '云南', 
+                                            {
+                                                std: '能跳就行', 
+                                                utl: [
+                                                    '摔死',
+                                                    '病死',
+                                                    '吓死'
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        obj: '睡觉'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+
+        })
+        console.log(vm)
+    </script>
+</body>
+</html>
